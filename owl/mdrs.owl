@@ -1,0 +1,841 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.MRDS.com#"
+     xml:base="http://www.MRDS.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.MRDS.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.MRDS.com#hasAdditionalFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasAdditionalFeature">
+        <rdfs:subPropertyOf rdf:resource="http://www.MRDS.com#hasFeature"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#AdditionalFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasApplicationSupport -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasApplicationSupport">
+        <rdfs:subPropertyOf rdf:resource="http://www.MRDS.com#hasFeature"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#ApplicationSupport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasBiometricSecurity -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasBiometricSecurity">
+        <rdfs:subPropertyOf rdf:resource="http://www.MRDS.com#hasFeature"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#BiometricSecuritySupport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasCameraFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasCameraFunction">
+        <rdfs:subPropertyOf rdf:resource="http://www.MRDS.com#hasFeature"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#Camera"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasFeature">
+        <rdfs:domain rdf:resource="http://www.MRDS.com#ITDevice"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasInternet -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasInternet">
+        <rdfs:subPropertyOf rdf:resource="http://www.MRDS.com#hasFeature"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#Internet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasPromotion -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasPromotion">
+        <rdfs:domain rdf:resource="http://www.MRDS.com#ITDevice"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#Promotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasScreenSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasScreenSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.MRDS.com#hasFeature"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#ScreenSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasScreenType -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasScreenType">
+        <rdfs:subPropertyOf rdf:resource="http://www.MRDS.com#hasFeature"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#ScreenType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasSimCard -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#hasSimCard">
+        <rdfs:subPropertyOf rdf:resource="http://www.MRDS.com#hasFeature"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#SimCard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#manufacturedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#manufacturedBy">
+        <owl:inverseOf rdf:resource="http://www.MRDS.com#manufactures"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.MRDS.com#manufactures -->
+
+    <owl:ObjectProperty rdf:about="http://www.MRDS.com#manufactures">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.MRDS.com#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.MRDS.com#ITDevice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.MRDS.com#costs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.MRDS.com#costs">
+        <rdfs:domain rdf:resource="http://www.MRDS.com#ITDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.MRDS.com#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.MRDS.com#hasName">
+        <rdfs:domain rdf:resource="http://www.MRDS.com#ITDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.MRDS.com#AdditionalFeature -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#AdditionalFeature">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Apple_Lover -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Apple_Lover">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.MRDS.com#ITDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.MRDS.com#manufacturedBy"/>
+                        <owl:hasValue rdf:resource="http://www.MRDS.com#Apple"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#ApplicationSupport -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#ApplicationSupport">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#BiometricSecuritySupport -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#BiometricSecuritySupport">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Budget_Phone -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Budget_Phone">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.MRDS.com#ITDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.MRDS.com#costs"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">400</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Business_Application -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Business_Application">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#ApplicationSupport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Business_Phone -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Business_Phone">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.MRDS.com#ITDevice"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasApplicationSupport"/>
+                                <owl:someValuesFrom rdf:resource="http://www.MRDS.com#Business_Application"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasBiometricSecurity"/>
+                                <owl:someValuesFrom rdf:resource="http://www.MRDS.com#BiometricSecuritySupport"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasInternet"/>
+                                <owl:hasValue rdf:resource="http://www.MRDS.com#5G"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasSimCard"/>
+                                <owl:hasValue rdf:resource="http://www.MRDS.com#DualSim"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Camera -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Camera">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Color -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Color">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Discount -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Discount">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Promotion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Feature -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Feature"/>
+    
+
+
+    <!-- http://www.MRDS.com#Gifts -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Gifts">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Promotion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#ITDevice -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#ITDevice"/>
+    
+
+
+    <!-- http://www.MRDS.com#InstallmentPlan -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#InstallmentPlan">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Promotion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Internet -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Internet">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Manufacturer -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Manufacturer"/>
+    
+
+
+    <!-- http://www.MRDS.com#Messaging_Application -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Messaging_Application">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#ApplicationSupport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Phones -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Phones">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#ITDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Promotion -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Promotion"/>
+    
+
+
+    <!-- http://www.MRDS.com#Saver_Promotion -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Saver_Promotion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.MRDS.com#ITDevice"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasPromotion"/>
+                                <owl:someValuesFrom rdf:resource="http://www.MRDS.com#Discount"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasPromotion"/>
+                                <owl:someValuesFrom rdf:resource="http://www.MRDS.com#Gifts"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasPromotion"/>
+                                <owl:someValuesFrom rdf:resource="http://www.MRDS.com#InstallmentPlan"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#ScreenSize -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#ScreenSize">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#ScreenType -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#ScreenType">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#SimCard -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#SimCard">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Simple_Elderly_Friendly_Phone -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Simple_Elderly_Friendly_Phone">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.MRDS.com#ITDevice"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasAdditionalFeature"/>
+                                <owl:hasValue rdf:resource="http://www.MRDS.com#BigButton"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasScreenSize"/>
+                                <owl:hasValue rdf:resource="http://www.MRDS.com#BigScreenSize"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Social_Media_Applications -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Social_Media_Applications">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#ApplicationSupport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Tablets -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Tablets">
+        <rdfs:subClassOf rdf:resource="http://www.MRDS.com#ITDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Trendy_Elderly_Phone -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Trendy_Elderly_Phone">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.MRDS.com#ITDevice"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasApplicationSupport"/>
+                                <owl:someValuesFrom rdf:resource="http://www.MRDS.com#Messaging_Application"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasApplicationSupport"/>
+                                <owl:someValuesFrom rdf:resource="http://www.MRDS.com#Social_Media_Applications"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasScreenSize"/>
+                                <owl:hasValue rdf:resource="http://www.MRDS.com#BigScreenSize"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.MRDS.com#hasScreenType"/>
+                                <owl:hasValue rdf:resource="http://www.MRDS.com#TouchScreen"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.MRDS.com#Vlogger_Phone -->
+
+    <owl:Class rdf:about="http://www.MRDS.com#Vlogger_Phone">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.MRDS.com#ITDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.MRDS.com#hasCameraFunction"/>
+                        <owl:hasValue rdf:resource="http://www.MRDS.com#4-rear_cameras"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.MRDS.com#Apple -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Apple">
+        <rdf:type rdf:resource="http://www.MRDS.com#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#AppleCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#AppleCompany">
+        <rdf:type rdf:resource="http://www.MRDS.com#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#BigButton -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#BigButton">
+        <rdf:type rdf:resource="http://www.MRDS.com#AdditionalFeature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#BigScreenSize -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#BigScreenSize">
+        <rdf:type rdf:resource="http://www.MRDS.com#ScreenSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#DualSim -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#DualSim">
+        <rdf:type rdf:resource="http://www.MRDS.com#SimCard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#FaceScanner -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#FaceScanner">
+        <rdf:type rdf:resource="http://www.MRDS.com#BiometricSecuritySupport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#FingerScanner -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#FingerScanner">
+        <rdf:type rdf:resource="http://www.MRDS.com#BiometricSecuritySupport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Keyboard -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Keyboard">
+        <rdf:type rdf:resource="http://www.MRDS.com#Gifts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Line -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Line">
+        <rdf:type rdf:resource="http://www.MRDS.com#ApplicationSupport"/>
+        <rdf:type rdf:resource="http://www.MRDS.com#Messaging_Application"/>
+        <rdf:type rdf:resource="http://www.MRDS.com#Social_Media_Applications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Messenger -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Messenger">
+        <rdf:type rdf:resource="http://www.MRDS.com#ApplicationSupport"/>
+        <rdf:type rdf:resource="http://www.MRDS.com#Messaging_Application"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Microsoft_PowerPoint -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Microsoft_PowerPoint">
+        <rdf:type rdf:resource="http://www.MRDS.com#Business_Application"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Microsoft_Word -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Microsoft_Word">
+        <rdf:type rdf:resource="http://www.MRDS.com#Business_Application"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Mouse -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Mouse">
+        <rdf:type rdf:resource="http://www.MRDS.com#Gifts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Normal_Screen -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Normal_Screen">
+        <rdf:type rdf:resource="http://www.MRDS.com#ScreenType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Phone1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Phone1">
+        <rdf:type rdf:resource="http://www.MRDS.com#Phones"/>
+        <hasCameraFunction rdf:resource="http://www.MRDS.com#4-rear_cameras"/>
+        <manufacturedBy rdf:resource="http://www.MRDS.com#Apple"/>
+        <manufacturedBy rdf:resource="http://www.MRDS.com#AppleCompany"/>
+        <costs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20000</costs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Phone2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Phone2">
+        <rdf:type rdf:resource="http://www.MRDS.com#Phones"/>
+        <hasApplicationSupport rdf:resource="http://www.MRDS.com#Line"/>
+        <hasApplicationSupport rdf:resource="http://www.MRDS.com#Messenger"/>
+        <hasCameraFunction rdf:resource="http://www.MRDS.com#4-rear_cameras"/>
+        <hasScreenSize rdf:resource="http://www.MRDS.com#BigScreenSize"/>
+        <hasScreenType rdf:resource="http://www.MRDS.com#TouchScreen"/>
+        <manufacturedBy rdf:resource="http://www.MRDS.com#Samsung"/>
+        <costs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1600</costs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Phone3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Phone3">
+        <rdf:type rdf:resource="http://www.MRDS.com#Phones"/>
+        <hasCameraFunction rdf:resource="http://www.MRDS.com#3-rear_cameras"/>
+        <hasPromotion rdf:resource="http://www.MRDS.com#Keyboard"/>
+        <hasPromotion rdf:resource="http://www.MRDS.com#Mouse"/>
+        <hasPromotion rdf:resource="http://www.MRDS.com#10Percent"/>
+        <costs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</costs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Phone4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Phone4">
+        <rdf:type rdf:resource="http://www.MRDS.com#Phones"/>
+        <hasAdditionalFeature rdf:resource="http://www.MRDS.com#BigButton"/>
+        <hasScreenSize rdf:resource="http://www.MRDS.com#BigScreenSize"/>
+        <manufacturedBy rdf:resource="http://www.MRDS.com#Samsung"/>
+        <costs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">350</costs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Samsung -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Samsung">
+        <rdf:type rdf:resource="http://www.MRDS.com#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Table1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Table1">
+        <rdf:type rdf:resource="http://www.MRDS.com#Tablets"/>
+        <hasPromotion rdf:resource="http://www.MRDS.com#Keyboard"/>
+        <hasPromotion rdf:resource="http://www.MRDS.com#Mouse"/>
+        <hasPromotion rdf:resource="http://www.MRDS.com#3Months"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#Tablet2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#Tablet2">
+        <rdf:type rdf:resource="http://www.MRDS.com#Tablets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#TouchScreen -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#TouchScreen">
+        <rdf:type rdf:resource="http://www.MRDS.com#ScreenType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#10Percent -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#10Percent">
+        <rdf:type rdf:resource="http://www.MRDS.com#Discount"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#3G -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#3G">
+        <rdf:type rdf:resource="http://www.MRDS.com#Internet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#3Months -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#3Months">
+        <rdf:type rdf:resource="http://www.MRDS.com#InstallmentPlan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#3-rear_cameras -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#3-rear_cameras">
+        <rdf:type rdf:resource="http://www.MRDS.com#Camera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#4G -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#4G">
+        <rdf:type rdf:resource="http://www.MRDS.com#Internet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#4-rear_cameras -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#4-rear_cameras">
+        <rdf:type rdf:resource="http://www.MRDS.com#Camera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#5G -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#5G">
+        <rdf:type rdf:resource="http://www.MRDS.com#Internet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#5Percent -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#5Percent">
+        <rdf:type rdf:resource="http://www.MRDS.com#Discount"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.MRDS.com#6Months -->
+
+    <owl:NamedIndividual rdf:about="http://www.MRDS.com#6Months">
+        <rdf:type rdf:resource="http://www.MRDS.com#InstallmentPlan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.MRDS.com#AdditionalFeature"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#ApplicationSupport"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#BiometricSecuritySupport"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#Camera"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#Internet"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#ScreenSize"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#ScreenType"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#SimCard"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.MRDS.com#AdditionalFeature"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#ApplicationSupport"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#BiometricSecuritySupport"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#Internet"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#ScreenSize"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.MRDS.com#Discount"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#Gifts"/>
+            <rdf:Description rdf:about="http://www.MRDS.com#InstallmentPlan"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
